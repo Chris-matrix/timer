@@ -1,0 +1,91 @@
+/* Custom CSS */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f9f9fc; /* Light gray background */
+  color: #1f2937; /* Dark gray text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Timer-specific styles */
+.Timer {
+  font-size: 2.25rem; /* 36px */
+  font-weight: bold;
+  color: #02022a; /* Dark blue text */
+  margin-top: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+/* Button styles */
+button {
+  margin: 0.25rem; /* 4px */
+  padding: 0.5rem 1rem; /* 8px vertical, 16px horizontal */
+  font-size: 1.125rem; /* 18px */
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem; /* 4px */
+  background-color: #3b82f6; /* Blue background */
+  color: white; /* White text */
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:disabled {
+  background-color: #9ca3af; /* Gray background for disabled state */
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem; /* 8px */
+  padding: 1.5rem; /* 24px */
+}
+
+/* Utility classes */
+.btn {
+  padding: 0.5rem 1rem; /* 8px vertical, 16px horizontal */
+  border-radius: 0.5rem; /* 8px */
+  color: rgb(255, 255, 255);
+}
+
+.btn-primary {
+  background-color: #3b82f6; /* Blue background */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+.btn-secondary {
+  background-color: #6b7280; /* Gray background */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563; /* Darker gray on hover */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem; /* 8px */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem; /* 24px */
+}
