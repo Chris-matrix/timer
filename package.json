@@ -2,7 +2,6 @@
   "name": "timer",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "start": "vite dev",
     "dev": "vite",
@@ -12,10 +11,13 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.9",
-    "postcss": "^8.5.3",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^10.4.20",
+    "lucide-react": "^0.476.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.9"
+    "recharts": "^2.15.1",
+    "shadcn-ui": "^0.9.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
