@@ -1,11 +1,15 @@
-// Import necessary hooks and components
 import { useState, useEffect } from 'react';
-import './index.css';
+import { SettingsProvider } from './components/settings/SettingsContext';
+import ProgressIndicator from './components/analytics/ProgressIndicator';
+import CountdownAnimation from './components/CountdownAnimation';
+import StreakCounter from './components/analytics/StreakCounter';
+import SessionStats from './components/analytics/SessionStats';
+import SettingsPanel from './components/settings/SettingsPanel';
 import TimerDisplay from './components/timer/TimerDisplay';
 import TimerControls from './components/timer/TimerControls';
-import Card from './components/common/Card'; // Import the Card component
+import Card from './components/common/Card';
+import './index.css';
 
-// Define the main App component
 const App = () => {
   // State to keep track of the timer (in seconds) and whether it is running
   const [time, setTime] = useState(1500); // 25 minutes in seconds
@@ -35,22 +39,30 @@ const App = () => {
     setTime(1500);
   };
 
-  // Render the main UI
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <Card className="w-full max-w-md p-8"> {/* Outer Card */}
-        <TimerDisplay time={time} /> {/* Display the current time */}
-        <TimerControls
-          isRunning={isRunning}
-          time={time}
-          onStart={handleStart}
-          onStop={handleStop}
-          onReset={handleReset}
-        /> {/* Controls to start, stop, and reset the timer */}
-      </Card>
-    </div>
+    <SettingsProvider>
+      <div className="App">
+        <h1>Focus Timer</h1>
+        <ProgressIndicator progress={75} />
+        <CountdownAnimation seconds={1500} />
+        <StreakCounter streak={3} />
+        <SessionStats stats={{ sessions: 10, duration: 300 }} />
+        <SettingsPanel />
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+          <Card className="w-full max-w-md p-8"> {/* Outer Card */}
+            <TimerDisplay time={time} /> {/* Display the current time */}
+            <TimerControls
+              isRunning={isRunning}
+              time={time}
+              onStart={handleStart}
+              onStop={handleStop}
+              onReset={handleReset}
+            /> {/* Controls to start, stop, and reset the timer */}
+          </Card>
+        </div>
+      </div>
+    </SettingsProvider>
   );
 };
 
-// Export the App component as the default export
 export default App;
