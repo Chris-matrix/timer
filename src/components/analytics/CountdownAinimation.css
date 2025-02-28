@@ -1,0 +1,41 @@
+/* Countdown Animation Styles */
+.countdown-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.countdown-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.countdown-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.countdown-circle circle {
+  fill: none;
+  stroke-width: 10;
+  stroke: #e6e6e6;
+}
+
+.countdown-circle circle:nth-child(2) {
+  stroke: #3b82f6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.countdown-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+}

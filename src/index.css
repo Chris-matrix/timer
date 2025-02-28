@@ -1,81 +1,106 @@
 @import "./tailwind.css";
 
-
 /* Custom CSS */
 body {
   margin: 0;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #f9f9fc; /* Light gray background */
-  color: #1f2937; /* Dark gray text */
+  background-color: #f9f9fc;
+  color: #1f2937;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.gif-input {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
 }
 
 /* Timer-specific styles */
 .Timer {
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.25rem;
   font-weight: bold;
-  color: #02022a; /* Dark blue text */
-  margin-top: 1.25rem; /* 20px */
-  margin-bottom: 1.25rem; /* 20px */
+  color: #02022a;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Button styles */
 button {
-  margin: 0.25rem; /* 4px */
-  padding: 0.5rem 1rem; /* 8px vertical, 16px horizontal */
-  font-size: 1.125rem; /* 18px */
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
   cursor: pointer;
   border: none;
-  border-radius: 0.25rem; /* 4px */
-  background-color: #3b82f6; /* Blue background */
-  color: white; /* White text */
+  border-radius: 0.25rem;
+  background-color: #3b82f6;
+  color: white;
   transition: background-color 0.3s ease-in-out;
 }
 
 button:disabled {
-  background-color: #9ca3af; /* Gray background for disabled state */
+  background-color: #9ca3af;
   cursor: not-allowed;
 }
 
 button:hover:not(:disabled) {
-  background-color: #1d4ed8; /* Darker blue on hover */
+  background-color: #1d4ed8;
 }
 
 /* Card styles */
 .card {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem; /* 8px */
-  padding: 1.5rem; /* 24px */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
 }
 
 /* Utility classes */
 .btn {
-  padding: 0.5rem 1rem; /* 8px vertical, 16px horizontal */
-  border-radius: 0.5rem; /* 8px */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   color: rgb(255, 255, 255);
 }
 
 .btn-primary {
-  background-color: #3b82f6; /* Blue background */
+  background-color: #3b82f6;
   transition: background-color 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8; /* Darker blue on hover */
+  background-color: #1d4ed8;
 }
 
 .btn-secondary {
-  background-color: #6b7280; /* Gray background */
+  background-color: #6b7280;
   transition: background-color 0.3s ease-in-out;
 }
 
 .btn-secondary:hover {
-  background-color: #4b5563; /* Darker gray on hover */
+  background-color: #4b5563;
 }
 
 .App {
@@ -83,12 +108,12 @@ button:hover:not(:disabled) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
 }
 
 .card {
   background-color: white;
-  border-radius: 0.5rem; /* 8px */
+  border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem; /* 24px */
+  padding: 1.5rem;
 }

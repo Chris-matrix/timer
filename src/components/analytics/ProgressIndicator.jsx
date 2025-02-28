@@ -1,8 +1,6 @@
-import { twc } from "react-twc";
-import { CircularProgressbar } from 'react-circular-progressbar';
 import PropTypes from 'prop-types';
 
-const ProgressIndicator = twc(CircularProgressbar)`w-64 h-64`;
+//const ProgressIndicator = twc(CircularProgressbar)`w-64 h-64`;
 
 function Timer({ timeLeft, totalTime }) {
     const progress = (timeLeft / totalTime) * 100;
@@ -34,5 +32,5 @@ Timer.propTypes = {
     timeLeft: PropTypes.number.isRequired,
     totalTime: PropTypes.number.isRequired,
 };
-
+//export default ProgressIndicator
 export default Timer;

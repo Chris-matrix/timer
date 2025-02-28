@@ -30,8 +30,14 @@ export function useSettings() {
 
 // Define the SettingsPanel component to display and modify timer settings
 function SettingsPanel() {
-  const { settings, setSettings } = useSettings();
 
+  const [settings, setSettings] = useState({
+    workDuration: 25,
+    breakDuration: 5,
+    longBreakDuration: 15,
+    longBreakInterval: 4,
+  });
+  
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Timer Settings</h2>

@@ -1,8 +1,7 @@
 import { createContext, useContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const SettingsContext = createContext();
-
-import PropTypes from 'prop-types';
 
 export function SettingsProvider({ children }) {
   const [settings, setSettings] = useState({
@@ -27,6 +26,7 @@ export function SettingsProvider({ children }) {
     </SettingsContext.Provider>
   );
 }
+
 SettingsProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
@@ -38,3 +38,4 @@ export function useSettings() {
   }
   return context;
 }
+ export default SettingsContext;
